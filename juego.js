@@ -69,7 +69,7 @@ window.addEventListener("click",()=>{
        i ++;
       
       
-    },5);
+    },3);
     
    
      
