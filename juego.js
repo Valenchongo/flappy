@@ -35,7 +35,7 @@ setInterval(()=>{
   }
   if(lefttubo<=leftpj+25){
     if( (posicionpj<=posicionmaxbujero+12.5)|| (posicionpj>=posicionminbujero) ){
-      alert("tu puntuacin es de "+puntuacion)
+      alert("tu puntuacion es de "+puntuacion)
       pj.style.top = 100+"px";
       puntuacion = -1;
       recordd = record.innerHTML 
@@ -50,7 +50,7 @@ setInterval(()=>{
          
   }
   if(posicionpj <=-12.5){
-    alert("tu puntuacin es de "+puntuacion)
+    alert("tu puntuacion es de "+puntuacion)
       pj.style.top = 100+"px";
       puntuacion = -1;
       recordd = record.innerHTML 
@@ -63,7 +63,7 @@ setInterval(()=>{
       
   }
   if(posicionpj >=477){
-    alert("tu puntuacin es de "+puntuacion)
+    alert("tu puntuacion es de "+puntuacion)
       pj.style.top = 100+"px";
       puntuacion = -1;
       recordd = record.innerHTML 
