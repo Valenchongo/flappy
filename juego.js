@@ -2,16 +2,21 @@ bujero = document.getElementById("agujero");
 tubo = document.getElementById("tubo");
 pj = document.getElementById("pj")
 contador = document.getElementById("contador")
+record = document.getElementById("record")
 var timejump = 0;
 posicionagujero = 0
 var jumping = 0;
 puntuacion = 0;
+nuevorecord = 0;
+recordd = 0;
 
 
 agujero.addEventListener("animationiteration" ,()=>{
   posicionagujero = -((Math.random()*300)+150)
   bujero.style.top = posicionagujero +"px";
   puntuacion++
+  nuevorecord++;
+  
   htmlcode = `${puntuacion}`
   contador.innerHTML = htmlcode;
 
@@ -33,6 +38,14 @@ setInterval(()=>{
       alert("tu puntuacin es de "+puntuacion)
       pj.style.top = 100+"px";
       puntuacion = -1;
+      recordd = record.innerHTML 
+      if(nuevorecord>recordd){
+      
+      record.innerHTML = nuevorecord;
+      
+      }
+      nuevorecord = -1; 
+      
     }
          
   }
@@ -40,13 +53,27 @@ setInterval(()=>{
     alert("tu puntuacin es de "+puntuacion)
       pj.style.top = 100+"px";
       puntuacion = -1;
+      recordd = record.innerHTML 
+      if(nuevorecord>recordd){
+      
+      record.innerHTML = nuevorecord;
+     
+      }
+      nuevorecord = -1;
+      
   }
   if(posicionpj >=477){
     alert("tu puntuacin es de "+puntuacion)
       pj.style.top = 100+"px";
       puntuacion = -1;
+      recordd = record.innerHTML 
+      if(nuevorecord>recordd){
+      
+      record.innerHTML = nuevorecord;
+      
+      }
+      nuevorecord = -1;
   }
-  console.log(posicionpj)
  
  },2.5) 
 
