@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+#juego{
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    margin : auto;
+    ;
+    background-color:  #87CEEB;
+}
+
+#tubo{
+    width: 70px;
+    height: 500px;
+    background-color: green;
+    position : relative;
+    left: 500px;
+    top: -25px;
+    animation: animacion 2s infinite linear;
+   
+}
+
+#agujero{
+    width: 70px;
+    height: 100px;
+    background-color:  #87CEEB;
+    position: relative;
+    left:430px;
+    top:-150px;
+    animation: animacion 2s infinite linear;
+   
+}
+
+#pj{
+    position: relative;
+    top: 200px;
+    left: 50px;
+    width: 25px;
+    height: 25px;
+    border-radius: 500px;
+    background-color: rebeccapurple;
+    z-index: 2;
+}
+
+#contador{
+    background-color:white;
+    width: 200px;
+    height: 50px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding-top:20px;
+    
+}
+
+@keyframes animacion {
+    0%{left:500px}
+    100%{left:0px}
+}
