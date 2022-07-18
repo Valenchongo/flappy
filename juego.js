@@ -1,8 +1,9 @@
 bujero = document.getElementById("agujero");
 tubo = document.getElementById("tubo");
-pj = document.getElementById("pj")
-contador = document.getElementById("contador")
-record = document.getElementById("record")
+pj = document.getElementById("pj");
+contador = document.getElementById("contador");
+record = document.getElementById("record");
+pantalla = document.getElementById("juego");
 var timejump = 0;
 posicionagujero = 0
 var jumping = 0;
@@ -12,9 +13,9 @@ recordd = 0;
 
 
 agujero.addEventListener("animationiteration" ,()=>{
-  posicionagujero = -((Math.random()*300)+150)
+  posicionagujero = -((Math.random()*300)+150);
   bujero.style.top = posicionagujero +"px";
-  puntuacion++
+  puntuacion++;
   nuevorecord++;
   
   htmlcode = `${puntuacion}`
@@ -29,16 +30,16 @@ setInterval(()=>{
   posicionminbujero = 600+posicionagujero; 
   leftpj = parseInt(window.getComputedStyle(pj).getPropertyValue("left"));
   lefttubo =parseInt(window.getComputedStyle(tubo).getPropertyValue("left"));
-  posicionpj = parseInt(window.getComputedStyle(pj).getPropertyValue("top"))
+  posicionpj = parseInt(window.getComputedStyle(pj).getPropertyValue("top"));
   if(jumping == 0){
    pj.style.top =(posicionpj+1.7)+"px";
   }
   if(lefttubo<=leftpj+25){
     if( (posicionpj<=posicionmaxbujero+12.5)|| (posicionpj>=posicionminbujero) ){
-      alert("tu puntuacion es de "+puntuacion)
+      alert("tu puntuacin es de "+puntuacion);
       pj.style.top = 100+"px";
       puntuacion = -1;
-      recordd = record.innerHTML 
+      recordd = record.innerHTML ;
       if(nuevorecord>recordd){
       
       record.innerHTML = nuevorecord;
@@ -50,10 +51,10 @@ setInterval(()=>{
          
   }
   if(posicionpj <=-12.5){
-    alert("tu puntuacion es de "+puntuacion)
+    alert("tu puntuacin es de "+puntuacion);
       pj.style.top = 100+"px";
       puntuacion = -1;
-      recordd = record.innerHTML 
+      recordd = record.innerHTML ;
       if(nuevorecord>recordd){
       
       record.innerHTML = nuevorecord;
@@ -63,10 +64,10 @@ setInterval(()=>{
       
   }
   if(posicionpj >=477){
-    alert("tu puntuacion es de "+puntuacion)
+    alert("tu puntuacin es de "+puntuacion);
       pj.style.top = 100+"px";
       puntuacion = -1;
-      recordd = record.innerHTML 
+      recordd = record.innerHTML;
       if(nuevorecord>recordd){
       
       record.innerHTML = nuevorecord;
@@ -75,15 +76,15 @@ setInterval(()=>{
       nuevorecord = -1;
   }
  
- },2.5) 
+ },2.5);
 
 
-window.addEventListener("click",()=>{
+pantalla.addEventListener("click",()=>{
     i = 0;
     jumping = 1;
     jump = setInterval(() => {
       
-      posicionpj = parseInt(window.getComputedStyle(pj).getPropertyValue("top"))
+      posicionpj = parseInt(window.getComputedStyle(pj).getPropertyValue("top"));
       if( (i <15 && i !=0)){
       pj.style.top =(posicionpj-4)+"px";
       }
